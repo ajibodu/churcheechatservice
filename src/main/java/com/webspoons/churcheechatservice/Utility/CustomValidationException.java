@@ -1,4 +1,4 @@
-package com.webspoons.churcheechatservice.Mics;
+package com.webspoons.churcheechatservice.Utility;
 
 import com.webspoons.churcheechatservice.pojo.Response;
 import com.webspoons.churcheechatservice.pojo.ResponseCodes;

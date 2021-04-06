@@ -9,4 +9,5 @@ import java.util.Optional;
 public interface MemberRepository extends MongoRepository<Member, String> {
 
     Optional<List<Member>> findByroomID(String roomID);
+    Optional<List<Member>> findBymemberID(String memberID);
 }

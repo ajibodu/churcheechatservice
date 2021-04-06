@@ -19,9 +19,12 @@ public class MongoConfig extends AbstractMongoClientConfiguration {
     @Value("${db.mongo.uri}")
     private String  MONGO_DB_URI;
 
+    @Value("${db.mongo.churchee}")
+    private String MONGO_DB_NAME;
+
     @Override
     protected String getDatabaseName() {
-        return "admin";
+        return MONGO_DB_NAME;
     }
 
     @Override
@@ -38,4 +41,9 @@ public class MongoConfig extends AbstractMongoClientConfiguration {
     public Collection getMappingBasePackages() {
         return Collections.singleton("com.webspoons.churcheechatservice.model");
     }
+
+//    @Override
+//    public boolean autoIndexCreation() {
+//        return true;
+//    }
 }

@@ -13,9 +13,12 @@ import java.util.Date;
 
 @Data
 @Document("tb_member")
+@CompoundIndex(def = "{'roomID':1, 'memberID':1}", name = "unq_user_in_room_index", unique = true)
 public class Member {
     @JsonIgnore
+    @Indexed
     private String roomID;
+    @Indexed
     private String memberID;
     @JsonIgnore
     private Date joinDate;

@@ -4,8 +4,11 @@ public enum ResponseCodes
 {
     SUCCESSFUL("00"),
     FAILED_CREATION("01"),
-    DUPLICATE_USER_REQUEST("02"),
-    VALIDATION_FAILURE("03");
+    DUPLICATE_REQUEST("02"),
+    VALIDATION_FAILURE("03"),
+    INVALID_AUTH("04"),
+    MISSING_AUTH_HEADER("05"),
+    SYSTEM_EXCEPTION("99");
 
     private String text;
 
